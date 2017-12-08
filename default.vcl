@@ -17,9 +17,9 @@ include "custom/custom_subroutines.vcl";
 backend default {
     .host = "VARNISH_BACKEND_ADDRESS";  # IP or Hostname of backend
     .port = "VARNISH_BACKEND_PORT";     # Port Apache or whatever is listening
-    .connect_timeout = 30s;              # Wait a maximum of 5s for backend connection (Apache, Nginx, etc...)
-    .first_byte_timeout = 60s;           # Wait a maximum of 10s for the first byte to come from your backend
-    .between_bytes_timeout = 10s;        # Wait a maximum of 2s between each bytes sent
+    .connect_timeout = 300s;              # Wait a maximum of 5s for backend connection (Apache, Nginx, etc...)
+    .first_byte_timeout = 600s;           # Wait a maximum of 10s for the first byte to come from your backend
+    .between_bytes_timeout = 100s;        # Wait a maximum of 2s between each bytes sent
     .max_connections = 300;             # Max parallel connections to our backend
 }
 
