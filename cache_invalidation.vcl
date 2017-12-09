@@ -9,7 +9,7 @@ acl purgers {
     "::1";
 
 # Varnish Backend
-    "VARNISH_BACKEND_ADDRESS";
+    "VARNISH_PURGE_ADDRESS";
 }
 
 sub vcl_recv {
